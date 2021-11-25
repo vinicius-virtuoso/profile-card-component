@@ -1,0 +1,136 @@
+// ### Primary
+
+$Dark-cyan: hsl(185, 75%, 39%);
+$Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$Dark-grayish-blue: hsl(227, 10%, 46%);
+
+// ### Neutral
+
+$Dark-gray: hsl(0, 0%, 59%);
+
+$Font-size-name-and-stats: 18px;
+
+$Font-Family: "Kumbh Sans", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  font-family: $Font-Family;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3%;
+  background: url("../images/bg-pattern-bottom.svg"),
+    url("../images/bg-pattern-top.svg") $Dark-cyan;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50vw 50vh, 0% -50vh;
+  background-size: 50vw, 50vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  border-radius: 12px;
+  height: 400px;
+  padding: 50px 0 0 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #fff url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 375px;
+  box-shadow: 0 0 100px -30px $Very-dark-desaturated-blue;
+
+  img {
+    border-radius: 50%;
+    width: 130px;
+    display: block;
+    max-width: 100%;
+    padding: 5px;
+    background: #fff;
+  }
+  h1 {
+    padding: 10px 0;
+    font-size: $Font-size-name-and-stats;
+    color: $Very-dark-desaturated-blue;
+    font-weight: 700;
+
+    span {
+      margin-left: 5px;
+      font-weight: 400;
+      color: $Dark-grayish-blue;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: $Dark-grayish-blue;
+    padding-bottom: 20px;
+  }
+
+  .separador {
+    width: 100%;
+    height: 1px;
+    background: $Dark-gray;
+    opacity: 0.4;
+    margin-top: 10px;
+  }
+
+  .box-infos {
+    width: 100%;
+    padding: 30px 45px 0px 45px;
+    display: flex;
+    justify-content: space-between;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        display: block;
+        color: $Very-dark-desaturated-blue;
+        font-weight: 700;
+        font-size: $Font-size-name-and-stats;
+        font-family: $Font-Family;
+      }
+      span:nth-child(2) {
+        font-weight: 400;
+        font-size: 14px;
+        color: $Dark-grayish-blue;
+        letter-spacing: 1px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+.attribution {
+  margin: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 780px) {
+  main {
+    background-position: 50vw 60vh, -50vw -20vh;
+    background-size: 100vw, 100vw;
+  }
+}
