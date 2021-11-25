@@ -108,13 +108,13 @@ main {
         font-weight: 700;
         font-size: $Font-size-name-and-stats;
         font-family: $Font-Family;
-      }
-      span:nth-child(2) {
-        font-weight: 400;
-        font-size: 14px;
-        color: $Dark-grayish-blue;
-        letter-spacing: 1px;
-        margin-top: 5px;
+        &:nth-child(2) {
+          font-weight: 400;
+          font-size: 14px;
+          color: $Dark-grayish-blue;
+          letter-spacing: 1px;
+          margin-top: 5px;
+        }
       }
     }
   }
